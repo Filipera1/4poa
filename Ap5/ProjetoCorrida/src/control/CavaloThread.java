@@ -5,27 +5,27 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
-public class CarroThread extends JLabel implements Runnable {
-    private Thread carroThread = null;
+public class CavaloThread extends JLabel implements Runnable {
+    private Thread cavaloThread = null;
     private int posX;
     private int posY;
     private ImageIcon imagem;
     private static int pos=0;
     private String nome;
     // CONSTRUTOR DEFAULT
-    public CarroThread() {
+    public CavaloThread() {
 
     }
     // CONSTRUTOR SOBRECARREGADO
-    public CarroThread(String nome, ImageIcon img, int posX, int posY){
+    public CavaloThread(String nome, ImageIcon img, int posX, int posY){
         super(img);
         this.imagem = img;
         this.posX = posX;
         this.posY = posY;
         this.nome = nome;
 
-        carroThread = new Thread(this, nome);
-        carroThread.start();
+        cavaloThread = new Thread(this, nome);
+        cavaloThread.start();
 
     }
     // M�TODO RUN() DA INTERFACE RUNNABLE
